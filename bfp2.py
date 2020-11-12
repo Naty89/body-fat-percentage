@@ -194,7 +194,6 @@ class BodyInfo:
                 else:
                     while af_bfp > cb:
                         af_bfp -= 0.2
-
                     return "You have to lose {} pounds".format(round(round(round(pre_bfp-round(af_bfp, 1), 1)/0.2)*0.8))
 
 
