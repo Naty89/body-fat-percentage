@@ -175,32 +175,3 @@ class BodyInfo:
 
         """
         This tells you how many pounds you need to loose 
-        to go down a category.
-        """
-        def pounds_to_lose():
-            pre_bfp = round(self.US_Navy_Method(), 1)
-            af_bfp = round(self.US_Navy_Method(), 1)
-            cb = category_below()
-            if self.gender.lower() == 'male':
-                if pre_bfp <= 5:
-                    "You shouldn't be losing any more weight."
-                else:
-                    while af_bfp > cb:
-                        af_bfp -= 0.2
-                    return "You have to lose {} pounds".format(round(round(round(pre_bfp-round(af_bfp, 1), 1)/0.2)*0.8))
-            else:
-                if pre_bfp <= 13:
-                    "You shouldn't be losing any more weight."
-                else:
-                    while af_bfp > cb:
-                        af_bfp -= 0.2
-                    return "You have to lose {} pounds".format(round(round(round(pre_bfp-round(af_bfp, 1), 1)/0.2)*0.8))
-
-
-
-        return(pounds_to_lose())
-        
-        
-
-x = BodyInfo(146, 65.5, 'male', 40, 12.5, 36.5, 36.5)
-print(x.Pounds_To_Lose())
